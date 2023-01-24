@@ -1,0 +1,8 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/filipewelton/algorithms.git",
+  "author": "filipewelton1 <filipewelton1@gmail.com>",
+  "license": "MIT"
+}
