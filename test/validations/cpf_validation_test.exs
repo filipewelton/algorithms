@@ -5,7 +5,14 @@ defmodule Algorithms.Validation.CPFValidationTest do
 
   describe "call/1" do
     test "when ?" do
-      response = CPFValidation.build("111.444.777-35")
+      list = [
+        "776.733.160-13",
+        "903.869.720-10",
+        "324.833.570-08"
+      ]
+
+      response = Enum.any?(list, fn e -> :ok = CPFValidation.build(e) end)
+
       IO.inspect(response)
     end
   end

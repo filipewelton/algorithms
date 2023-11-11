@@ -45,9 +45,15 @@ defmodule Algorithms.Validation.CPFValidation do
   end
 
   defp handle_calc(operators, _operands, acc) when operators == [] do
-    Enum.sum(acc)
-    |> rem(11)
-    |> (&(11 - &1)).()
+    division_rest =
+      Enum.sum(acc)
+      |> rem(11)
+
+    if division_rest < 2 do
+      0
+    else
+      11 - division_rest
+    end
   end
 
   defp handle_calc(operators, operands, acc) do
