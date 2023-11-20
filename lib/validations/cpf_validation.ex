@@ -1,5 +1,6 @@
 defmodule Algorithms.Validation.CPFValidation do
   def build(cpf) do
+    
     {digits, verification_code} =
       String.replace(cpf, ~r/[.-]/, "")
       |> String.split_at(9)
