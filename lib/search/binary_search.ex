@@ -1,18 +1,5 @@
 defmodule Search.BinarySearch do
-  def run(length, target) do
-    vector = gen_vector(length, [])
-
-    {vector, search(vector, target, 0)}
-  end
-
-  defp gen_vector(n, acc) when n > 0 do
-    number = :rand.uniform(n)
-    updated = List.insert_at(acc, -1, number)
-
-    gen_vector(n - 1, updated)
-  end
-
-  defp gen_vector(_n, acc), do: Enum.sort(acc)
+  def run(vector, target), do: search(vector, target, 0)
 
   defp search(vector, target, pointer) when length(vector) > 1 do
     middle = div(length(vector), 2)
