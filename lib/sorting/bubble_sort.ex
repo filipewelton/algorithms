@@ -1,4 +1,4 @@
-defmodule Algorithms.BubbleSort do
+defmodule Algorithms.Sorting.BubbleSort do
   def run(list_elements) do
     n_recursion = length(list_elements)
 
