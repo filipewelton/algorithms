@@ -18,6 +18,7 @@ defmodule Search.KnuthMorrisPratt do
     search(text, pattern, states, 0, 0)
   end
 
+  @spec set_state(list(), list(), integer(), integer()) :: list()
   defp set_state(pattern, aux, j, i) when i < length(pattern) - 1 do
     x1 = Enum.at(pattern, j)
     x2 = Enum.at(pattern, i)
